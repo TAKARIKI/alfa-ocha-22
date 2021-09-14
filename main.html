@@ -196,7 +196,7 @@ Youtube貼り付けここまで -->
         クリア画面の「次のステージへ」ボタンをクリックしたら表示します。
         v-if="next['stage1']"はnext['stage1']がtrueになったら表示します。
       ----------------------------------------------------------------------->
-      <div v-if="next['stage1']" id="sectionStage2" class="stage">
+      <div v-if="next['stage2']" id="sectionStage3" class="stage">
         <section>
           <div class="section">
             <div class="container">
@@ -208,7 +208,7 @@ Youtube貼り付けここまで -->
           </div>
           <div class="stage-column__container section bg-color--keycolor">
             <div class="container">
-              <h2 class="section-title"><span class="section-title__stage">STAGE：３</span>キーワードを入力</h３>
+              <h2 class="section-title"><span class="section-title__stage">STAGE：3</span>キーワードを入力</h３>
               <!-------------------------------------------------------------
                 class名"row"内のclass名"column"が横並びになります。
                 改行する場合は以下のように追加してください。
@@ -228,8 +228,8 @@ Youtube貼り付けここまで -->
                   </figure>
                   <!-- STAGE３-1問題セクション　ここまで -->
                   <!-- STAGE３-1解答入力セクション　ここから -->
-                  <answer-input v-bind:correct="correctAnswer['stage３']['q1']" v-on:answer-input="answerInput($event, 'stage３', 1)"></answer-input>
-                  <a class="link-hint" href="hint2.html" target="hint３">ヒントをみる ></a>
+                  <answer-input v-bind:correct="correctAnswer['stage３']['q1']" v-on:answer-input="answerInput($event, 'stage3', 1)"></answer-input>
+                  <a class="link-hint" href="hint2.html" target="hint3">ヒントをみる ></a>
                   <!-- STAGE３-1解答入力セクション　ここまで -->
                 </div><!-- /.column -->
                 <!-- STAGE３-1　ここまで -->
@@ -242,8 +242,8 @@ Youtube貼り付けここまで -->
                     <img src="assets/images/stage.png" alt="">
                   </figure>
 
-                  <answer-input v-bind:correct="correctAnswer['stage2']['q2']" v-on:answer-input="answerInput($event, 'stage2', 2)"></answer-input>
-                  <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a>
+                  <answer-input v-bind:correct="correctAnswer['stage３']['q2']" v-on:answer-input="answerInput($event, 'stage３', 2)"></answer-input>
+                  <a class="link-hint" href="hint３.html" target="hint３">ヒントをみる ></a>
                 　
                 </div>
 
@@ -257,8 +257,8 @@ Youtube貼り付けここまで -->
                     <img src="assets/images/stage.png" alt="">
                   </figure>
 
-                  <answer-input v-bind:correct="correctAnswer['stage2']['q3']" v-on:answer-input="answerInput($event, 'stage2', 3)"></answer-input>
-                  <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a>
+                  <answer-input v-bind:correct="correctAnswer['stage３']['q3']" v-on:answer-input="answerInput($event, 'stage３', 3)"></answer-input>
+                  <a class="link-hint" href="hint３.html" target="hint３">ヒントをみる ></a>
 
                 </div>
 
@@ -271,13 +271,13 @@ Youtube貼り付けここまで -->
         </section>
 
         <!-- STAGE３クリア画面　ここから -->
-        <section v-if="clear['stage2']" v-bind:class="{isClear:clear['stage2']}"  class="section section--clear bg-color--gray">
+        <section v-if="clear['stage3']" v-bind:class="{isClear:clear['stage３']}"  class="section section--clear bg-color--gray">
           <div class="container">
             <div class="clear-message">
-              <div class="clear-message__title">STAGE：2　クリア！</div>
+              <div class="clear-message__title">STAGE：３　クリア！</div>
               <div class="clear-message__content">地図に従い、<br>
                 次のステージの謎を解こう！</div>
-                <button v-on:click="nextStage('stage2')" onclick="location.href='#sectionStage3'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
+                <button v-on:click="nextStage('stage３')" onclick="location.href='#sectionStage3'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
           </div>
         </section>
@@ -286,7 +286,7 @@ Youtube貼り付けここまで -->
       <!-- STAGE３　ここまで -->
       
             <!-- STAGE４　ここから -->
-      <div v-if="next['stage2']" id="sectionStage3" class="stage">
+      <div v-if="next['stage3']" id="sectionStage4" class="stage">
 
         <!-- STAGE４-1問題セクション　ここから -->
         <section class="section">
