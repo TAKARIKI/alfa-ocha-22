@@ -21,8 +21,8 @@ const app = Vue.createApp({
           q1: '1621',
         },
         stage2: {
-          q1: '3',
-           q2: '2',
+          q1: '2',
+           q2: '3',
            q3: '1'
         },
         stage3: {
