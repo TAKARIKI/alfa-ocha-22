@@ -109,7 +109,7 @@ Youtube貼り付けここまで -->
               <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：2</span>黒板に書かれている謎を解け！</h2>
               <p class="text-center">部屋を出ることができた！<br>
                 出口の横には屋敷の地図らしきものが飾られている。<br>
-                地図に●▲×■のマークがあったので慎重に行ってみることにした。</p>
+                地図に●▲✖️■のマークがあったので慎重に行ってみることにした。</p>
             </div>
           </div>
           <div class="stage-column__container section bg-color--keycolor">
@@ -181,7 +181,7 @@ Youtube貼り付けここまで -->
           <div class="container">
             <div class="clear-message">
               <div class="clear-message__title">STAGE：2　クリア！</div>
-              <div class="clear-message__content">黒板の指示に従い、<br>
+              <div class="clear-message__content">地図に従い、<br>
                 次のステージの謎を解こう！</div>
                 <button v-on:click="nextStage('stage2')" onclick="location.href='#sectionStage3'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
@@ -198,9 +198,9 @@ Youtube貼り付けここまで -->
         <section class="section">
           <div class="container">
             <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：3</span>家庭科室の課題とは</h2>
-            <p class="text-center">黒板から得たメッセージは、「食物の廃棄問題」だった。<br>
-              どうやら、廃棄にかかる費用がかかりすぎて小学校の運営が厳しくなったようだ。。<br>
-              これらを解決するための最後の謎を解いていこう！</p>
+            <p class="text-center">玄関に戻ってきた<br>
+              これまでに解いてきた謎の場所に書いてあった●▲✖️■の文字が書いてある扉がある。<br>
+              ●▲✖️■の謎を使って扉の謎を解こう！</p>
             <figure class="image__container">
               <img src="assets/images/stage.png" alt="">
             </figure>
@@ -217,7 +217,7 @@ Youtube貼り付けここまで -->
               v-on:answer-input="answerInput($event, 'stage3', 1, 'final')" は送信ボタンをクリックした時の動作を決める関数です。
               4番目の引数 'final' は最終ステージを表します。
             ------------------------------------------------------------------------------------------------------------------>
-            <answer-input v-bind:correct="correctAnswer['stage3']['q1']" v-on:answer-input="answerInput($event, 'stage3', 1, 'final')"></answer-input>
+            <answer-input v-bind:correct="correctAnswer['stage3']['q1']" v-on:answer-input="answerInput($event, 'stage3', 1)"></answer-input>
             <a class="link-hint" href="hint3.html" target="hint3">ヒントをみる ></a>
           </div>
         </section>
@@ -307,7 +307,7 @@ STAGE3-3追加　ここまで -->
                   </figure>
                   <!-- STAGE４-1問題セクション　ここまで -->
                   <!-- STAGE４-1解答入力セクション　ここから -->
-                  <answer-input v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage４', 1)"></answer-input>
+                  <answer-input v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage４', 1 , 'final')"></answer-input>
                   <a class="link-hint" href="hint４.html" target="hint４">ヒントをみる ></a>
                   <!-- STAGE４-1解答入力セクション　ここまで -->
                 </div><!-- /.column -->
@@ -349,7 +349,7 @@ STAGE3-3追加　ここまで -->
           </div>
         </section>
 
-        <!-- STAGE2クリア画面　ここから -->
+        <!-- STAGE４クリア画面　ここから -->
         <section v-if="clear['stage４']" v-bind:class="{isClear:clear['stage2']}"  class="section section--clear bg-color--gray">
           <div class="container">
             <div class="clear-message">
